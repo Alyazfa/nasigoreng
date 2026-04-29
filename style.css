@@ -84,6 +84,19 @@ body {
     width: 70px;
 }
 
+#message{
+    background: #ff4e4e;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+#alertBox{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
 .menu ul li a {
     float:left;
     display: block;
