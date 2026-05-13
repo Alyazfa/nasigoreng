@@ -49,6 +49,30 @@
                 <p><a href="#" class="undecor">Jquery</a></p>
                 <p><a href="#" class="undecor">Ajax</a></p>
             </div>
+      <script>
+    // Cek apakah user sudah login
+    window.onload = function() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const user = localStorage.getItem('currentUser');
+
+        if (isLoggedIn === 'true') {
+            // Contoh: Ubah teks tombol login menjadi nama user atau tampilkan ucapan selamat datang
+            console.log("Selamat datang, " + user);
+            // Anda bisa memanipulasi DOM di sini, misal:
+            // document.getElementById('welcome-msg').innerText = "Halo, " + user;
+        } else {
+            // Jika belum login, paksa kembali ke login.html (opsional)
+            // window.location.href = 'login.html';
+        }
+    };
+
+    // Fungsi Logout
+    function logout() {
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('currentUser');
+        window.location.href = 'login.html';
+    }
+</script>
         </div>
         </div>
 </div>
